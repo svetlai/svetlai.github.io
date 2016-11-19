@@ -1,0 +1,95 @@
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip + .tooltiptext {
+    visibility: hidden;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
+    padding: 5px;
+    border-radius: 6px;
+    font-size:10pt;
+    line-height: 1.5;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover + .tooltiptext {
+    width: 100%;
+    overflow-y: auto;
+    bottom: 12%;
+    left:0;
+    visibility: visible;
+    max-height:100%;
+}
+
+.w-100-percent {
+      width: 100%;
+}
+
+.w-30-px {
+    width:30px;
+}
+
+.p-10-px {
+    padding:10px;
+}
+
+.image .circle {
+    width: 20% !important;
+    border-radius:50%;
+}
+
+/*Override*/
+.item {
+    position: relative;
+}
+
+#footer {
+    background-color: #664c5a;
+}
+
+#main > section.one {
+    background-color: #664c5a;
+    background-image: none;
+}
+
+#main > section.four {
+    background-color:white;
+}
+
+#main > section.dark a {
+        color: rgba(255, 255, 255, 0.75);
+}
+
+#main > section.dark a:hover {
+    color: white;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button {
+    background-color: #664c5a;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover,
+.button:hover {
+    background-color: #846776;
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active,
+.button:active {
+    background-color: #593e4c;
+}
