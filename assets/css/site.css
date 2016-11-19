@@ -35,8 +35,20 @@
     width:30px;
 }
 
+.mh-150-px {
+    max-height:150px;
+}
+
 .p-10-px {
     padding:10px;
+}
+
+.fs-12-pt {
+    font-size:12pt;
+}
+
+.lh-1-5 {
+    line-height:1.5;
 }
 
 .image .circle {
