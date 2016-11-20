@@ -2,9 +2,19 @@
 layout: project
 title: LikeIt
 demolink: http://likeit.apphb.com/
+videolink:
 sourcelink: https://github.com/svetlai/LikeIt
-imagepath: images/portfolio-like-it.png
+imagepath: /images/portfolio-like-it.png
+teamproject:
+technologies: <i class="tooltip icon fa-dot-circle-o w-30-px" aria-hidden="true"></i><span class="tooltiptext text-center">ASP.NET MVC</span>
+
 ---
+<h3 class="lh-2">
+<span class="pull-right">
+<i class="tooltip icon-aspnet icon-aspnet-tooltip mr-5-px" aria-hidden="true"></i>
+<span class="tooltiptext technologies">ASP.NET MVC</span>
+</span>
+LikeIt</h3>
 
 <div>Online anything-rating system - an <b>ASP.NET MVC</b> project</div> 
 <div>The idea of LikeIt is for anyone to be able to express their opinion 

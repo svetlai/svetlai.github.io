@@ -7,7 +7,6 @@
 
 .tooltip + .tooltiptext {
     visibility: hidden;
-    width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
     text-align: justify;
     padding: 5px;
@@ -18,21 +17,45 @@
     z-index: 1;
 }
 
-.tooltip:hover + .tooltiptext {
-    width: 100%;
+.tooltip:hover + .tooltiptext,
+.tooltip + .tooltiptext:hover {
     overflow-y: auto;
-    bottom: 12%;
-    left:0;
+    overflow-x: hidden;
     visibility: visible;
     max-height:100%;
 }
 
+.tooltip + .tooltiptext.portfolio {
+    width: 100%;
+    bottom: 45px;
+    left:0;
+}
+
+.tooltip + .tooltiptext.technologies {
+    top:35px;
+    right:0;
+}
+
+/*Icons*/
+.icon-asp:before {
+  content: "\e900";
+}
+
+/*Basic*/
 .w-100-percent {
       width: 100%;
 }
 
 .w-30-px {
     width:30px;
+}
+
+.w-20-px {
+    width:20px;
+}
+
+.w-20-percent {
+    width: 20% !important;
 }
 
 .mh-150-px {
@@ -43,6 +66,10 @@
     padding:10px;
 }
 
+.mr-5-px {
+    margin-right:5px;
+}
+
 .fs-12-pt {
     font-size:12pt;
 }
@@ -51,8 +78,19 @@
     line-height:1.5;
 }
 
+.lh-2 {
+    line-height:2;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right;
+}
+
 .image .circle {
-    width: 20% !important;
     border-radius:50%;
 }
 
@@ -104,4 +142,21 @@ input[type="reset"]:active,
 button:active,
 .button:active {
     background-color: #593e4c;
+}
+
+/*Icon Font*/
+.icon-aspnet-tooltip {
+    font-size:13pt;
+    top:3px;
+    right:3px;
+}
+
+.icon-js-tooltip {
+    font-size:14pt;
+    top:2px;
+}
+
+.icon-csharp-tooltip {
+    font-size:13pt;
+    top:3px;
 }

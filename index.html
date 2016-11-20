@@ -9,7 +9,7 @@ layout: default
 		<div class="container">
 			<header>
 				<span class="image centered">
-					<img class="circle" src="/images/avatar.jpg" alt="" />
+					<img class="circle w-20-percent" src="/images/avatar.jpg" alt="" />
 				</span>
 				<h2 class="alt">Svetla Ivanova</h2>
 				<h4>Software Developer</h4>
@@ -31,21 +31,22 @@ layout: default
 				<h2>Portfolio</h2>
 			</header>
 			<div class="row">
-				{% for project in site.projects limit:1 %}
-				<div class="6u 12u$(mobile)">
-					<article class="item">
-						<img src="{{project.imagepath}}" alt="{{project.title}}" class="image fit" target="_blank" />
+				{% for project in site.projects reversed %}
+					<article class="{% cycle '6u', '6u$' %} 12u(small)">
+						<div class="item">
+						<img src="{{project.imagepath}}" alt="{{project.title}}" class="image fit" target="_blank" />			
 						<header>
-							<h2>{{project.title}}</h2>
-							<a href="{{project.demolink}}" target="_blank" class="">Demo</a> <a href="{{project.sourcelink}}" target="_blank"
-								class="">Source</a>
+							<h2>{{project.title}}</h2>											
+							{% if project.demolink.size > 0 %} <a href="{{project.demolink}}" target="_blank">Demo</a> {% endif %}
+							{% if project.videolink.size > 0 %} <a href="{{project.videolink}}" target="_blank">Video</a> {% endif %}		
+							{% if project.sourcelink.size > 0 %}<a href="{{project.sourcelink}}" target="_blank">Source</a> {% endif %}							
 							<div class="w-100-percent">
 								<i class="tooltip icon fa-info-circle w-30-px"></i>
-								<span class="tooltiptext">{{project.content}}</span>
+								<span class="tooltiptext portfolio">{{project.content}}</span>					
 							</div>
 						</header>
+						</div>
 					</article>
-				</div>
 				{% endfor %}
 			</div>
 		</div>
@@ -85,25 +86,22 @@ layout: default
 	<!-- About Me -->
 	<section id="about" class="three">
 		<div class="container">
-
 			<header>
 				<h2>About Me</h2>
 			</header>
-
-			<!--<a href="#" class="image featured"><img src="/images/pic08.jpg" alt="" /></a>-->
-
 			<section>
 				<article>
 					<div class="row">				
 						<span class="6u 12u$(mobile)">
-							<h3><i class="icon fa-building" aria-hidden="true"></i> Experience</h3>
+							<h3><i class="icon fa-building" aria-hidden="true"></i> Experience*</h3>
 							<div>.Net Developer since September 2015.</div>
 						</span>
 						<span class="6u 12u$(mobile)">
-							<h3><i class="icon fa-university" aria-hidden="true"></i> Education</h3>
-							<div>Telerik Software Academy (2014)</div>
+							<h3><i class="icon fa-university" aria-hidden="true"></i> Education*</h3>
+							<div>Telerik Software Academy (2014)</div>	
 						</span>
 					</div>
+					<span class="fs-12-pt">*in software</span>
 				</article>
 				<article>
 					<h3><i class="icon fa-star" aria-hidden="true"></i> Certificates</h3>
@@ -157,8 +155,6 @@ layout: default
 						</span>
 					</div>
 					</p>
-				</article>
-				<article>
 					<div class="row">				
 						<span class="12u 12u$(mobile)">
 							<h3><i class="icon fa-user" aria-hidden="true"></i> Personal Interests</h3>
